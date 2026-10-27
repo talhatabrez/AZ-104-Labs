@@ -22,3 +22,14 @@ Using Virtual Networks to create ASG and NSG.
 -> We also used several inbound and outbound security rules to restrict the access over the internet.
 -> Created using template: Search for **Deploy a custom template** then use the sample template, make changes and then push that template.
 -> Resolve using both public and private DNS zones.
+
+**Day - 3:**
+
+Using Network Watcher, Route Tables, and implement intersite connectivity
+-> Created two VMS, VNETs.
+-> Tested the connection between them using Network Watcher and then Connection Troubleshoot. It failed, since we have not connected both of the VNETs.
+-> Configured Virtual network peering between virtual networks.
+-> Used:  Enable-NetFirewallRule -DisplayGroup "Remote Desktop" to run the powershell script in one VM.
+-> Used:  Test-NetConnection <first VM private IP address> -port 3389 to test the TCP connection.
+-> Created custom route. Then wanted to control network traffic between the perimeter subnet (new subnet created within first VM) and the internal core services subnet (existing subnet of first VM). A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there.
+-> Created route table, then went to Subnets within Route table and selected it to associate.
