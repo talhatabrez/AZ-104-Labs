@@ -33,3 +33,13 @@ Using Network Watcher, Route Tables, and implement intersite connectivity
 -> Used:  Test-NetConnection <first VM private IP address> -port 3389 to test the TCP connection.
 -> Created custom route. Then wanted to control network traffic between the perimeter subnet (new subnet created within first VM) and the internal core services subnet (existing subnet of first VM). A virtual network appliance will be installed in the perimeter subnet and all traffic should be routed there.
 -> Created route table, then went to Subnets within Route table and selected it to associate.
+
+Day - 4: 
+
+Implement network traffic management: Using load balancer in Azure to balance the incoming requests across different virtual machines.
+-> Created two VMS in a single VNET. The both VMs have their own subnets.
+-> Create a load balancer (standard load balancer). Added frontend IP and Backend pool.
+-> We then create the load balancing rules.
+-> configure Application Gateway.
+
+
